@@ -1,0 +1,19 @@
+{
+  "GameStateIntegrationPort": 1337,
+  "ServerPort": 2626,
+  "SteamApiKey": "",
+  "PrintPlayerData": false,
+  "DisplayAvatars": true,
+  "DisplayPlayerAvatars": true,
+  "DisplayTeamFlags": false,
+  "DisplayPlayerFlags": false,
+  "AvatarDirectory": "./public/files/avatars/",
+  "SpecialEvent": "SHOWMATCH",
+  "LeftImage": "/files/league/league.png",
+  "LeftPrimary": "ESEA Group A · Round 14",
+  "LeftSecondary": "Best of 1", 
+  "RightImage": "/files/league/league2.png",
+  "RightPrimary": " ",
+  "RightSecondary": " ",
+  "GSIToken": "120987"
+}

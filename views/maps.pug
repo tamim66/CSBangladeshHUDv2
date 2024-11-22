@@ -1,0 +1,37 @@
+
+    #mapSelection
+      h1 Select Maps
+      form#mapForm
+        label(for="map1") Map 1
+        select#map1(name="map1")
+          option(value="none") None
+          option(value="dust2") Dust 2
+          option(value="mirage") Mirage
+          option(value="inferno") Inferno
+          option(value="nuke") Nuke
+          option(value="overpass") Overpass
+          option(value="vertigo") Vertigo
+        label(for="map2") Map 2
+        select#map2(name="map2")
+          option(value="none") None
+          option(value="dust2") Dust 2
+          option(value="mirage") Mirage
+          option(value="inferno") Inferno
+          option(value="nuke") Nuke
+          option(value="overpass") Overpass
+          option(value="vertigo") Vertigo
+        label(for="map3") Map 3
+        select#map3(name="map3")
+          option(value="none") None
+          option(value="dust2") Dust 2
+          option(value="mirage") Mirage
+          option(value="inferno") Inferno
+          option(value="nuke") Nuke
+          option(value="overpass") Overpass
+          option(value="vertigo") Vertigo
+        button#submitMapSelection(type="button") Submit
+
+    script.
+      document.getElementById('submitMapSelection').addEventListener('click', () => {
+        window.location.href = "/template"; // Redirect to template page
+      });
