@@ -1,4 +1,4 @@
-    ![](https://i.postimg.cc/FsfLgg9V/Screenshot-2024-11-22-13-27-35.png)
+![](https://i.postimg.cc/FsfLgg9V/Screenshot-2024-11-22-13-27-35.png)
 
 # CSbangladeshHud-CS2v2
 > [!IMPORTANT]
