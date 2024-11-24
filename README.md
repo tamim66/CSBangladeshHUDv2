@@ -1,7 +1,6 @@
 ![](https://i.postimg.cc/FsfLgg9V/Screenshot-2024-11-22-13-27-35.png)
 
-# CSbangladeshHud-CS2v2
-> [! Credits]
+# CSBangladeshHud-v2
 > Thanks to [dionpirotta](https://github.com/dionpirotta/Custom-CSGO-HUD#examples) for Hud & [boltgolt](https://github.com/boltgolt/boltobserv?tab=readme-ov-file) for radar.
 
 ### Hud installation
