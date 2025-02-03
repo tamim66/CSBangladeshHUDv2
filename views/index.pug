@@ -13,31 +13,37 @@ html
 	script(src="/js/huds.js")
 	script(src="/js/materialize.min.js")
 	link(rel='stylesheet', href='/css/materialize.min.css')
+	link(rel='stylesheet', href='/css/style.css')
 	link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
 	meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-	body
+	body.grey.darken-4.white-text
 		.container
 				.row
 					.col.s12
-						ul.tabs
+						ul.tabs.grey.darken-4
 							li.tab.col.s3
-								a.active(href='#team_panel') Teams
-							li.tab.col.s3
-								a(href='#player_panel') Players
-							li.tab.col.s3
-								a(href='#match') Create match
+								a.active(href='#match') Create match
+									i.material-icons add
 							li.tab.col.s3
 								a(href='#huds') HUDs
-					#team_panel.col.s12
-						include teams.pug
-					#player_panel.col.s12
-						include players.pug
+									i.material-icons list
+							li.tab.col.s3
+								a(href='#team_panel') Teams 
+									i.material-icons group
+							li.tab.col.s3
+								a(href='#player_panel') Players
+									i.material-icons person
 					#match.col.s12
 						include panel.pug
 					#huds.col.s12
 						include huds.pug
+					#team_panel.col.s12
+						include teams.pug
+					#player_panel.col.s12
+						include players.pug
+				
 	script.
 		$('select').formSelect();
 		$('.dropdown-button').dropdown({

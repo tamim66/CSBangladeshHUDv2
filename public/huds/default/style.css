@@ -19,7 +19,6 @@ body {
   transform: translateX(-50%);
   outline: 0.5px solid rgba(255, 255, 255, 0.5);
   background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
-
 }
 
 #left_team {
@@ -38,12 +37,17 @@ body {
 
 #main {
   position: relative;
-  width: 150px;
-  height: 40px;
   font-family: "Rajdhani", sans-serif;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 20px;
   font-size: 25px;
+  text-transform: uppercase;
   color: white;
   opacity: 0.8;
+  width: 150px;
 }
 
 #left_team #main {
@@ -87,50 +91,21 @@ body {
   right: 20px;
 }
 
-/*#team_flag {
-  position: absolute;
-  z-index: -1;
-  display: block;
-  width: 50px;
-  height: 33px;
-  top: 19px;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
-  opacity: 1;
-}
-
-#left_team > #team_flag {
-  float: right;
-  right: 7px;
-  background-repeat: no-repeat;
-}
-
-#right_team > #team_flag {
-  float: left;
-  left: 12px;
-  background-repeat: no-repeat;
-}*/
-
 #best_of {
-  width: 150px;
-  height: 30px;
+  width: 55px;
+  height: 12.5px;
   position: relative;
+  top: 15px;
 }
 #left_team #best_of {
   float: left;
-  right: 65px;
   transform: scaleX(-1); /* Flip horizontally */
 }
 #left_team #best_of * {
   transform: scaleX(-1); /* Revert text and other child elements */
 }
-
 #right_team #best_of {
   float: right;
-  left: 65px;
 }
 
 #score_left {
@@ -194,8 +169,8 @@ body {
 .block4,
 .block5 {
   outline: 0.5px solid rgba(255, 255, 255, 0.5);
-  width: 15px;
-  height: 15px;
+  width: 12.5px;
+  height: 12.5px;
   border-radius: 50%;
   background-color: var(--white-dull);
   opacity: 0;
@@ -203,32 +178,27 @@ body {
 
 .block1 {
   position: absolute;
-  left: 50px;
-  top: 10px;
+  right: 0px;
 }
 
 .block2 {
   position: absolute;
-  left: 70px;
-  top: 10px;
+  right: 20px;
 }
 
 .block3 {
   position: absolute;
-  left: 30px;
-  top: 10px;
+  right: 40px;
 }
 
 .block4 {
   position: absolute;
-  left: 70px;
-  top: 10px;
+  right: 0px;
 }
 
 .block5 {
   position: absolute;
-  left: 50px;
-  top: 10px;
+  right: 20px;
 }
 
 #left_team .bar {
@@ -239,40 +209,47 @@ body {
   float: right;
 }
 
+/* Start Vetos Section */
+#vetos {
+  width: 400px;
+  height: 270px;
+  position: absolute;
+  display: none;
+  right: 15px;
+  top: 10px;
+  border-radius: 2px;
+}
+
 #vetos img:not([src]){ display:none; } /* Removes the borders for images that are not loaded*/
 
 #Vetos_Container {
   width: 400px;
   position: absolute;
   z-index: 1;
-  background-color: black;
   display: flex;
   flex-direction: column;
+  outline: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
 }
 #Vetos_Title {
   flex: .5;
-  background-image: url("/files/img/elements/CenterSection.jpg");
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
 }
-#map_picked{
+#map_picked, #picked_by, #won_by {
   flex: 1;
   display: flex;
-  justify-content: left;
-  padding-left: 40px;
+  justify-content: space-evenly;
 }
-
-#picked_by {
-  flex: 1;
-  display: flex;
-  justify-content: right;
-  padding-right: 30px;
-}
-
 #Vetos_Maps {
-  flex: 3;
-  background-color: black;
+  flex: 4;
+  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   display: flex;
   flex-direction: column;
 }
@@ -285,19 +262,18 @@ body {
   background-size: cover;
 }
 
-#map_1_pick, #map_2_pick, #map_3_pick, #map_4_pick, #map_5_pick {
-  flex: .5;
-  display: flex;
-  justify-content: center;
-  font-size: 18px;
-  background: rgba(0, 0, 0, 0.7);
-}
-#map_1_team, #map_2_team, #map_3_team, #map_4_team, #map_5_team {
+
+#map_1_pick, #map_1_team, #map_1_winner, #map_2_pick, #map_2_team, #map_2_winner, #map_3_pick, #map_3_team, #map_3_winner, #map_4_pick, #map_4_team, #map_4_winner, #map_5_pick, #map_5_team, #map_5_winner {
   flex: 1;
   display: flex;
-  justify-content: right;
-  padding-right: 36px;
-  font-size: 18px;
+  justify-content: center;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#map_1_pick, #map_2_pick, #map_3_pick, #map_4_pick, #map_5_pick {
+  background: rgb(0,0,0,0.5);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,0) 90%);
 }
 
 /* End Vetos Section */
@@ -338,9 +314,9 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 45px;
+  top: 50px;
   float: left;
-  width: 120px;
+  width: 70px;
   height: 16px;
   font-family: "Rajdhani", sans-serif;
   text-align: center;
@@ -448,7 +424,6 @@ body {
   position: relative;
   width: 180px;
   height: 100px;
-  background-image: url("/files/img/elements/icon_defuse_default.png");
   max-width: auto;
   background-repeat: no-repeat;
   background-size: contain;
@@ -926,18 +901,18 @@ body {
 }
 
 #obs_k{
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 6px;
+  top: 7px;
   left: 20px;
   background-image: url("/files/img/elements/icon_kills_obs.png");
 }
 #obs_d{
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 6px;
+  top: 7px;
   left: 0px;
   background-image: url("/files/img/elements/icon_skull_obs.png");
 }
@@ -1765,20 +1740,20 @@ body {
 }
 
 #stat_k{
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 5px;
+  top: 6px;
   background-image: url("/files/img/elements/icon_kills_obs.png");
-  opacity: 0.8;
+  opacity: 0.5;
 }
 #stat_d{
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   position: absolute;
-  top: 5px;
+  top: 6px;
   background-image: url("/files/img/elements/icon_skull_obs.png");
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 

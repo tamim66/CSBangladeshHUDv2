@@ -1,0 +1,61 @@
+.select-wrapper input.select-dropdown, #delay, input{
+    color: white;
+}
+::placeholder, .select-dropdown li.disabled>span {
+    color: #929292;
+}
+.caret {
+    fill: white !important;
+}
+.dropdown-content li>a, .dropdown-content li>span, .select-dropdown.dropdown-content li.selected {
+    background-color: #212121;
+}
+.dropdown-content li>a:hover, .dropdown-content li>span:hover {
+    background-color: #363636;
+}
+blockquote {
+    background-color: #ee6e7238;
+}
+table.highlight>tbody>tr:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+.btn.disabled {
+   background-color: #0e0e0e !important;
+}
+
+.tabs .material-icons {
+    position: relative;
+    top: 7px;
+    left: 5px;
+}
+
+#actionbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+#set {
+    display: flex;
+    justify-content: center;
+    flex: .5;
+}
+#swap {
+    display: flex;
+    justify-content: center;
+    flex: .5;
+}
+#ref {
+    display: flex;
+    justify-content: center;
+    flex: .5;
+}
+
+.card.small .card-content, .card.medium .card-content, .card.large .card-content {
+    overflow: visible;
+}
+
+#Map1Card, #Map2Card, #Map3Card, #Map4Card, #Map5Card {
+    display: none;
+}
+

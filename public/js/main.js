@@ -1,6 +1,7 @@
 var io = io("http://" + ip + ":" + port + "/");
 var avatars = {};
 
+
 function load(cb) {
   loadTeams(cb);
 }
@@ -41,8 +42,34 @@ function loadAvatar(steamid, callback) {
 }
 
 $(document).ready(function () {
+  if (io.connected) {
+    console.log("main.js Connected to io");
+  }
+  let ignoredSteamIDs = []; //Initialize ignoredSteamIDs array to hide players
   var slotted = [];
   var meth = {
+  
+    getVetos: function() {
+      if (!match) {return false;}
+      let vetos = {
+        map1_PICK: (match.map_1.map_pick),
+        map2_PICK: (match.map_2.map_pick),
+        map3_PICK: (match.map_3.map_pick),
+        map4_PICK: (match.map_4.map_pick),
+        map5_PICK: (match.map_5.map_pick),
+        map1_TEAM: this.loadTeam(match.map_1.map_team),
+        map2_TEAM: this.loadTeam(match.map_2.map_team),
+        map3_TEAM: this.loadTeam(match.map_3.map_team),
+        map4_TEAM: this.loadTeam(match.map_4.map_team),
+        map5_TEAM: this.loadTeam(match.map_5.map_team),
+        map1_WINNER: this.loadTeam(match.map_1.map_winner),
+        map2_WINNER: this.loadTeam(match.map_2.map_winner),
+        map3_WINNER: this.loadTeam(match.map_3.map_winner),
+        map4_WINNER: this.loadTeam(match.map_4.map_winner),
+        map5_WINNER: this.loadTeam(match.map_5.map_winner),
+      };
+      return vetos;
+    },
     getTeamOne: function () {
       if (!this.info.teams) return false;
       return this.loadTeam(this.info.teams.team_1.team);
@@ -62,16 +89,22 @@ $(document).ready(function () {
     },
     getPlayers: function () {
       if (!this.info.allplayers) return false;
-
       let res = [];
+
       for (var steamid in this.info.allplayers) {
         let player = this.info.allplayers[steamid];
-        if (player.observer_slot == 0) player.observer_slot = 10;
+       
         player.steamid = steamid;
+        player.steamid = steamid;
+        
+        if (ignoredSteamIDs.includes(steamid)) { //If the steamID is in ignoredSteamIDs, we continue to the next player in the loop
+          continue;
+        }
+
         res.push(player);
       }
       res.sort(function (a, b) {
-        return a.observer_slot - b.observer_slot;
+        return a.observer_slot - b.observer_slot + 1;
       });
       return res;
     },
@@ -90,7 +123,7 @@ $(document).ready(function () {
 
       ret = $.extend({}, ret, this.info.map.team_ct);
 
-      if (!ret.name) ret.name = "CT";
+      if (!ret.name) ret.name = "Counter-terrorists";
       for (let sid in this.getPlayers()) {
         let player = this.getPlayers()[sid];
         if (player.team.toLowerCase() == "ct") {
@@ -119,7 +152,7 @@ $(document).ready(function () {
 
       ret = $.extend({}, ret, this.info.map.team_t);
 
-      if (!ret.name) ret.name = "T";
+      if (!ret.name) ret.name = "Terrorists";
       for (let sid in this.getPlayers()) {
         let player = this.getPlayers()[sid];
         if (player.team.toLowerCase() == "t") {
@@ -148,8 +181,8 @@ $(document).ready(function () {
       return false;
     },
     getPlayer: function (slot) {
-      slot = parseInt(slot);
-      if (!(slot >= 0 && slot <= 10)) return false;
+      slot = parseInt(slot)+1;
+      if (!(slot >= 0 && slot <= 11)) return false;
       return slotted[slot];
     },
     phase: function () {
@@ -246,6 +279,14 @@ $(document).ready(function () {
   function listener(players, teams) {
     io.on("match", function (data) {
       match = data;
+      coach1 = data.team_1.coach;
+      if(!ignoredSteamIDs.includes(coach1)) { 
+        ignoredSteamIDs.push(coach1);
+       }
+      coach2 = data.team_2.coach;
+      if(!ignoredSteamIDs.includes(coach2)) { 
+        ignoredSteamIDs.push(coach2);
+       }
     });
     io.on("update", function (json) {
       json.teams = match;
