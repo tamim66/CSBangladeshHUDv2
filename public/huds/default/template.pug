@@ -24,7 +24,6 @@ html
     link(rel='stylesheet', href=anim)
   body
     section
-      #map1
       #top_panel
         #left_bar 
         #right_bar
@@ -80,7 +79,6 @@ html
           #alert_middle
             #alert_text_middle
               |ALERT TEXT
-      
       //- Radar Section WIP
       #radar_container
         #radar_title
@@ -169,11 +167,17 @@ html
             #obs_skull
             #obs_round_kills_text
           #obs_middle_section
-            #obs_kills
+            #obs_bullets_section
+            #obs_ammo_section
+              #obs_clip
+                |150
+              #obs_reserve
+                |/300
+            //-#obs_kills
               #obs_k
               #obs_kills_text
                 |0
-            #obs_deaths
+            //-#obs_deaths
               #obs_d
               #obs_deaths_text
                 |0 
@@ -183,12 +187,13 @@ html
               #obs_nade2
               #obs_nade3
               #obs_nade4
-            //-#obs_bullets_section
-            #obs_ammo_section
-              #obs_clip
-                |150
-              #obs_reserve
-                |/300
+            #obs_nades_h
+              #obs_nade1_h
+              #obs_nade2_h
+              #obs_nade3_h
+              #obs_nade4_h
+
+            
       #players_left
         #box_section
           //-#box_top
