@@ -357,6 +357,7 @@ body {
   position: absolute;
   font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
+  line-height: 30px;
   text-align: center;
   display: flex;          /* Enables flexbox */
   justify-content: center; /* Centers horizontally */
@@ -365,7 +366,7 @@ body {
 
 #left_team > #alert > #alert_text {
   left: 5px;
-  top: 2.5px;
+  top: 0px;
   display: flex;          /* Enables flexbox */
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Centers vertically */
@@ -373,7 +374,7 @@ body {
 
 #right_team > #alert > #alert_text {
   left: 5px;
-  top: 2.5px;
+  top: 0px;
   display: flex;          /* Enables flexbox */
   justify-content: center; /* Centers horizontally */
   align-items: center;     /* Centers vertically */
