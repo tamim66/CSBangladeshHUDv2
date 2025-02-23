@@ -1,53 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   color: #fafafa;
   background-color: rgba(0, 0, 0, 0);
 }
 
 #top_panel {
   border-radius: 2px;
-  width: 640px;
+  width: 550px;
   height: 70px;
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
-  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  background: rgba(0, 0, 0, 0.95);
 }
 
 #left_team {
   position: relative;
   float: left;
-  width: 235px;
+  width: 200px;
   height: 70px;
 }
 
 #right_team {
   position: relative;
   float: right;
-  width: 235px;
+  width: 200px;
   height: 70px;
 }
 
 #main {
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  top: 20px;
-  font-size: 25px;
+  top: 18px;
+  font-size: 26px;
   text-transform: uppercase;
   color: white;
   opacity: 0.8;
-  width: 150px;
+  width: 55%;
 }
 
 #left_team #main {
@@ -115,9 +114,9 @@ body {
   width: 45px;
   height: 60px;
   text-align: center;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: normal;
   color: rgba(56, 123, 238, 1.0);
 }
 #score_right {
@@ -127,9 +126,9 @@ body {
   width: 45px;
   height: 60px;
   text-align: center;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 50px;
-  font-weight: bold;
+  font-weight: normal;
   color: rgba(242, 162, 37, 1);
 }
 
@@ -156,7 +155,7 @@ body {
 #right_bar{
   position: fixed;
   border-radius: 2px;
-  left: 625px;
+  left: 535px;
   width: 5px;
   height: 30px;
   top: 20px;
@@ -168,7 +167,7 @@ body {
 .block3,
 .block4,
 .block5 {
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
+  outline: 0.5px solid rgba(255, 255, 255, 0.4);
   width: 12.5px;
   height: 12.5px;
   border-radius: 50%;
@@ -211,7 +210,7 @@ body {
 
 /* Start Vetos Section */
 #vetos {
-  width: 400px;
+  width: 300px;
   height: 270px;
   position: absolute;
   display: none;
@@ -223,12 +222,11 @@ body {
 #vetos img:not([src]){ display:none; } /* Removes the borders for images that are not loaded*/
 
 #Vetos_Container {
-  width: 400px;
+  width: 300px;
   position: absolute;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
 }
 #Vetos_Title {
@@ -238,7 +236,7 @@ body {
   align-items: center;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  background: rgba(0, 0, 0, 0.95);
 }
 #map_picked, #picked_by, #won_by {
   flex: 1;
@@ -247,7 +245,7 @@ body {
 }
 #Vetos_Maps {
   flex: 4;
-  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  background: rgba(0, 0, 0, 0.95);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   display: flex;
@@ -281,7 +279,7 @@ body {
 #center_section {
   position: relative;
   float: left;
-  width: 170;
+  width: 150;
   height: 70px;
 }
 
@@ -299,12 +297,12 @@ body {
   position: relative;
   width: 60px;
   height: 60px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 60px;
   font-size: 30px;
-  font-weight: bold;
+  font-weight: normal;
   color: var(--dev-purple);
   animation-duration: 0.25s;
   animation-iteration-count: 1;
@@ -314,11 +312,11 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 5px;
+  bottom: 2px;
   float: left;
   width: 70px;
   height: 16px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 15px;
@@ -330,30 +328,15 @@ body {
 #alert {
   border-radius: 2px;
   position: relative;
-  width: 180px;
-  height: 100px;
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(30, 30, 30, 0.9);
-}
-
-#alert_img_right{
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  left: 46%;
-}
-
-#alert_img_left{
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  right: 46%;
+  width: 200px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #left_team > #alert {
-  top: 80px;
+  top: 75px;
   position: relative;
-  right: -230px;
+  right: 0px;
   opacity: 0;
   color: var(--dev-purple);
   animation-duration: 0.5s;
@@ -361,9 +344,9 @@ body {
 }
 
 #right_team > #alert {
-  top: 80px;
+  top: 75px;
   position: relative;
-  left: -175px;
+  left: 0px;
   opacity: 0;
   color: var(--dev-purple);
   animation-duration: 0.5s;
@@ -371,30 +354,50 @@ body {
 }
 
 #alert_text {
-  bottom: 10px;
-  position: relative;
-  width: 180px;
-  height: 40px;
-  font-family: "Rajdhani", sans-serif;
-  text-align: center;
-  vertical-align: text-bottom;
+  position: absolute;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
-  font-weight: normal;
-
+  text-align: center;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
 }
 
 #left_team > #alert > #alert_text {
-  float: left;
+  left: 5px;
+  top: 2.5px;
 }
 
 #right_team > #alert > #alert_text {
-  float: right;
+  left: 5px;
+  top: 2.5px;
 }
+
+#plant_progress_container {
+  position: fixed;
+  top: 85px;
+  left: 1135px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#plant_progress {
+  width: 0%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95); /* Change this color if needed */
+  transition: width linear;
+}
+
 
 #bomb_defuse {
   position: absolute;
-  width: 180px;
-  height: 100px;
+  width: 200px;
+  height: 30px;
 }
 
 #left_team #bomb_defuse {
@@ -407,8 +410,8 @@ body {
 
 #icon {
   position: relative;
-  width: 180px;
-  height: 100px;
+  width: 200px;
+  height: 30px;
   opacity: 0.3;
 }
 
@@ -422,8 +425,8 @@ body {
 
 .kit {
   position: relative;
-  width: 180px;
-  height: 100px;
+  width: 200px;
+  height: 30px;
   max-width: auto;
   background-repeat: no-repeat;
   background-size: contain;
@@ -449,24 +452,27 @@ body {
 }
 
 #timers {
-  width: 180px;
-  height: 5px;
-  top: 175px;
+  width: 200px;
+  height: 30px;
+  top: 75px;
   position: fixed;
-  left: 50%;
+  left: 100px;
   transform: translateX(-50%);
+  z-index: 1;
+  border-radius: 2px;
+  opacity: 0.5;
 }
 
 #defuse_bar {
-  height: 5px;
+  height: 30px;
   position: fixed;
   background-color: var(--color-defuse);
 }
 
 #alert_middle_holder {
   position: fixed;
-  width: 310px;
-  height: 40px;
+  width: 150px;
+  height: 30px;
   top: 98px;
   left: 50%;
   transform: translateX(-50%);
@@ -475,10 +481,9 @@ body {
 #alert_middle {
   border-radius: 2px;
   position: relative;
-  width: 310px;
-  height: 40px;
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
-  background-color: rgba(30, 30, 30, 0.9);
+  width: 150px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.95);
   opacity: 0;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -506,25 +511,26 @@ body {
 
 #alert_text_middle {
   position: relative;
-  float: left;
-  width: 300px;
-  height: 40px;
-  font-family: "Rajdhani", sans-serif;
+  width: 150px;
+  height: 30px;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
-  line-height: 46px;
-  font-size: 18px;
+  line-height: 20px;
+  font-size: 20px;
   font-weight: normal;
   color: var(--dev-purple);
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
 }
 
 #players_alive {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 150px;
   border-radius: 2px;
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
-  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  background: rgba(0, 0, 0, 0.95);
   position: fixed;
   right: 15px;
   top: 15px;
@@ -542,7 +548,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(30, 30, 30, 0.9);
+  background: rgba(0, 0, 0, 0.95);
 }
 #PA_counter_countainer {
   display: flex;
@@ -584,7 +590,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 382px;
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 10px;
@@ -596,7 +601,7 @@ body {
   flex-direction: column;
   width: 382px;
   height: 45px;
-  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  background: rgba(0, 0, 0, 0.95);
   left: 15px;
   top: 10px;
 }
@@ -605,7 +610,7 @@ body {
   width: 382px;
   height: 50%;
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   font-size: 20px;
   font-weight: normal;
@@ -617,7 +622,7 @@ body {
   width: 382px;
   height: 50%;
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   font-size: 105x;
   font-weight: normal;
@@ -639,7 +644,7 @@ body {
   height: 50%;
   left: 20px;
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 47px;
@@ -659,7 +664,7 @@ body {
   height: 50%;
   left: 25px;
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 28px;
@@ -669,131 +674,152 @@ body {
 }
 #observed {
   border-radius: 2px;
-  width: 300px;
-  height: 150px;
+  width: 225px;
+  height: 175px;
   position: absolute;
   left: 960px;
   bottom: 105px;
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
   transform: translateX(-50%);
 }
 
 #obs_avatar {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  width: 150px;
+  width: 225px;
   height: 150px;
   position: absolute;
-  background-color: rgba(30, 30, 30, 0.9);
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; 
+  z-index: 1;
 }
 
 #obs_img {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   position: relative;
+  left: 0%;
   width: 150px;
   height: 150px;
-  z-index: 10;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; 
+  z-index: 1;
 }
 
 #obs_team { 
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  width: 150px;
+  width: 225px;
   height: 150px;
-  bottom: 0px;
   position: absolute;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; 
 }
 #obs_team_img{
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 180px;
   position: relative;
   opacity: 0.3;
 }
 
 #obs_alias_text {
   width: 150px;
-  height: 40px;
+  height: 25px;
   position: absolute;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   display: flex; /* Enable flexbox */
   align-items: center; /* Vertically center */
-  justify-content: center; /* Horizontally center */
-  line-height: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--dev-purple);
+  left: 5px;
+  line-height: 24px;
+  font-size: 24px;
+  color: #1e1e1e;
+  bottom: -1px;
+  z-index: 10;
 }
 
 #obs_lane3 {
   border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
   height: 150px;
-  width: 150px;
+  width: 225px;
   float: right;
-  background: linear-gradient(to right, #333333 0%, #1e1e1e 100%);
+  background: rgb(0, 0, 0, 0.95);
 }
 
 #obs_hp_section {
   border-bottom-right-radius: 2px;
-  width: 150px;
-  height: 40px;
-  top: 110px;
+  width: 225px;
+  height: 25px;
+  bottom: 0px;
   position: absolute;
 }
 #obs_hpbar1, #obs_hpbar2, #obs_hpbar3, #obs_hpbar4 {
   width: 100%;
   height: 100%;
-  position: absolute;
-  background-color: var(--dev-purple);
+  position: absolute;  
 }
-#obs_hpblock1, #obs_hpblock2, #obs_hpblock3, #obs_hpblock4 {
-  width: 37.5px;
-  height: 40px;
-  position: absolute;
-  left: 0px;
-}
-#obs_hpblock2 {
-  left: 37.5px;
-}
-#obs_hpblock3 {
-  left: 75px;
+#obs_hpbarX{
+  width: 100%;
+  height: 100%;
+  background-color: #1e1e1e;
 }
 #obs_hpblock4 {
-  left: 112.5px;
+  width: 225px;
+  height: 25px;
+  position: absolute;
+  left: 0px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; 
+}
+/*#obs_hpblock2 {
+  left: 56px;
+}
+#obs_hpblock3 {
+  left: 112px;
+}*/
+#obs_hpblock4 {
+  left: 0 px;
 }
 
 #obs_lane3_left_pole {
   border-bottom-right-radius: 2px;
-  width: 150px;
-  height: 40px;
-  top: 110px;
+  width: 225px;
+  height: 25px;
+  bottom: 0px;
   position: absolute; 
   background-color: var(--dev-purple);
   opacity: 0.7;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; 
 }
 
 #obs_left_section { 
-  width: 150px;
-  height: 40px;
+  width: 225px;
+  height: 25px;
+  bottom: 0px;
   position: absolute;
-  top: 110px;
 }
 
 #obs_health_section{
-  width: 75px;
-  height: 40px;
-  position: absolute; 
+  width: 50px;
+  height: 25px;
+  bottom: 0px;
+  right: 5px;
+  position: absolute;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;  
 }
 
 #obs_health_img {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: relative;
-  left: 10px;
-  top: 10px;
+  left: 5px;
+  top: 5px;
   z-index: 1;
 }
 
@@ -801,26 +827,28 @@ body {
   position: relative;
   width: 30px;
   height: 20px;
-  top: -12px;
-  left: 35px;
-  font-family: "Rajdhani", sans-serif;
-  font-size: 20px;
+  left: 18px;
+  font-family: "Bebas Neue", sans-serif;
+  display: flex; /* Enable flexbox */
+  align-items: center; /* Vertically center */
+  font-size: 24px;
+  bottom: 2px;
   color: #1e1e1e;
 }
 
 #obs_armor_section {
-  width: 75px;
-  height: 40px;
-  left: 75px;
+  width: 25px;
+  height: 25px;
+  right: 50px;
   position: absolute;
 }
 
 #obs_armor_img {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   position: relative;
-  left: 10px;
-  top: 10px;
+  left: 5px;
+  top: 5px;
 }
 
 #obs_armor_text {
@@ -829,32 +857,33 @@ body {
   height: 20px;
   top: -12px;
   left: 35px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   color: #1e1e1e;
 }
 
 #obs_middle_section {
-  width: 150px;
+  width: 112.5px;
   height: 30px;
-  bottom: 80px;
+  bottom: 25px;
+  right: 0px;
   position: absolute;
 }
 
 #obs_bomb_kit {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   position: absolute;
-  left: 125px;
-  bottom: 125px;
+  right: 8px;
+  top: 8px;
 }
 
 #obs_round_kills {
   width: 30px;
   height: 40px;
   position: absolute;
-  left: 5px;
-  bottom: 105px;
+  left: 8px;
+  top: 8px;
   border-radius: 2px;
 }
 
@@ -873,7 +902,7 @@ body {
   top: 6px;
   left: 10px;
   position: absolute;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   font-weight: normal;
   color: #1e1e1e; 
@@ -921,7 +950,7 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   display: flex; /* Enable flexbox */
   align-items: center; /* Vertically center */
   justify-content: center; /* Horizontally center */
@@ -935,7 +964,7 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   display: flex; /* Enable flexbox */
   align-items: center; /* Vertically center */
   justify-content: center; /* Horizontally center */
@@ -946,8 +975,8 @@ body {
 }
 
 #obs_nades {
-  width: 150px;
-  height: 40px;
+  width: 112.5px;
+  height: 30px;
   position: absolute;
 }
 
@@ -955,8 +984,8 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  left: 30px;
-  bottom: 10px;
+  left: 5px;
+  bottom: 5px;
   z-index: 1;
 }
 
@@ -964,8 +993,8 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  left: 55px;
-  bottom: 10px;
+  left: 25px;
+  bottom: 5px;
   z-index: 1;
 }
 
@@ -973,8 +1002,8 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  left: 80px;
-  bottom: 10px;
+  left: 45px;
+  bottom: 5px;
   z-index: 1;
 }
 
@@ -982,14 +1011,14 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  left: 105px;
-  bottom: 10px;
+  left: 65px;
+  bottom: 5px;
   z-index: 1;
 }
 
 #obs_nades_h {
-  width: 150px;
-  height: 40px;
+  width: 112.5px;
+  height: 30px;
   position: absolute;
 }
 
@@ -999,10 +1028,10 @@ body {
   border-radius: 50%;
   position: absolute;
   background-color: #fafafa;
-  bottom: 15px;
+  bottom: 10px;
   opacity: 0.3;
   z-index: 1;
-  left: 35px;
+  left: 10px;
 }
 
 #obs_nade2_h {
@@ -1011,10 +1040,10 @@ body {
   border-radius: 50%;
   position: absolute;
   background-color: #fafafa;
-  bottom: 15px;
+  bottom: 10px;
   opacity: 0.3;
   z-index: 1;
-  left: 60px;
+  left: 30px;
 }
 
 #obs_nade3_h {
@@ -1023,10 +1052,10 @@ body {
   border-radius: 50%;
   position: absolute;
   background-color: #fafafa;
-  bottom: 15px;
+  bottom: 10px;
   opacity: 0.3;
   z-index: 1;
-  left: 85px;
+  left: 50px;
 }
 
 #obs_nade4_h {
@@ -1035,56 +1064,64 @@ body {
   border-radius: 50%;
   position: absolute;
   background-color: #fafafa;
-  bottom: 15px;
+  bottom: 10px;
   opacity: 0.3;
   z-index: 1;
-  left: 110px;
+  left: 70px;
 }
 
 #obs_right_section {
-  width: 150px;
-  height: 40px;
-  bottom: 40px;
+  width: 112.5px;
+  height: 30px;
+  bottom: 25px;
+  left: 0px;
   position: absolute;
 }
 
 #obs_bullets_section {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   left: 35px;
   bottom: 2.5px;
+
 }
 
 #obs_ammo_section {
   position: absolute;
-  width: 150px;
+  width: 112.5px;
   height: 30px;
+  right: 0px;
+  z-index: 1;
 }
 
 #obs_clip {
-  left: 60px;
-  width: 25px;
-  height: 20px;
+  left: 45px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  bottom: 5px;
-  font-family: "Rajdhani", sans-serif;
-  text-align: right;
-  font-size: 20px;
+  bottom: 0px;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  font-size: 25px;
   font-weight: normal;
   color: var(--white-full);
+  display: flex;          /* Enables flexbox */
+  justify-content: right; /* Centers horizontally */
+
 }
 
 #obs_reserve {
-  width: 25px;
-  height: 20px;
+  width: 40px;
+  height: 25px;
   position: absolute;
-  left: 85px;
-  bottom: 5px;
-  font-family: "Rajdhani", sans-serif;
-  text-align: right;
+  left: 72px;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   font-weight: normal;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  top: 5px;
   color: var(--dev-purple);
 }
 
@@ -1129,7 +1166,6 @@ body {
 }
 
 #box_top {
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px; 
   width: 100%;
   height: 71px;
@@ -1176,7 +1212,7 @@ body {
 
 #players_right > #box_section > #box_top > #box_main {
   right: 29px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 76px;
@@ -1201,7 +1237,7 @@ body {
 }
 
 #box_heading_text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 23px;
@@ -1212,7 +1248,7 @@ body {
 }
 
 #box_heading_subtext {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 23px;
@@ -1318,7 +1354,7 @@ body {
 #util_nade_1_count {
   height: 50px;
   width: 45px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1349,7 +1385,7 @@ body {
 #util_nade_2_count {
   height: 50px;
   width: 45px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1380,7 +1416,7 @@ body {
 #util_nade_3_count {
   height: 50px;
   width: 45px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1411,7 +1447,7 @@ body {
 #util_nade_4_count {
   height: 50px;
   width: 45px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1423,14 +1459,13 @@ body {
 }
 
 #box_monetary {
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   width: 300px;
   height: 70px;
   background-color: var(--main-panel-color);
   display: none;
-  background-color: #1e1e1e;
-  opacity: 0.9;
+  background-color: rgba(0, 0, 0, 0).95;
+  opacity: 1;
 }
 
 #team_logo_t{
@@ -1458,7 +1493,7 @@ body {
 }
 
 #money_text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 40px;
@@ -1469,7 +1504,7 @@ body {
 }
 
 #money_value {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 20px;
@@ -1480,7 +1515,7 @@ body {
 }
 
 #loss_text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 40px;
@@ -1491,7 +1526,7 @@ body {
 }
 
 #loss_value {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 20px;
@@ -1605,7 +1640,6 @@ body {
 }
 
 .player_main_holder {
-  outline: 0.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   width: 300px;
   height: 80px;
@@ -1623,7 +1657,7 @@ body {
   height: 35%;
   position: absolute;
   top: 65%;
-  background-color: #464646;
+  background-color: #1e1e1e;
   z-index: 10;
 }
 
@@ -1683,7 +1717,7 @@ body {
 }
 
 #player_health_text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   vertical-align: text-bottom;
   line-height: 40px;
   font-size: 22px;
@@ -1715,10 +1749,9 @@ body {
   height: 18px;
   position: absolute;
   border-radius: 50%;
-  border: 1px solid white;
-  z-index: 1;
+  z-index: 10;
   text-align: center;
-  top: 20px;
+  top: 25px;
   line-height: 20px;
   font-size: 15px;
 }
@@ -1732,8 +1765,8 @@ body {
 /* End Player Slot Section */
 
 #player_alias_text {
-  font-family: "Rajdhani", sans-serif;
-  vertical-align: text-bottom;
+  font-family: "Bebas Neue", sans-serif;
+  top: 2.5px;
   line-height: 26px;
   font-size: 22px;
   font-weight: normal;
@@ -1775,7 +1808,7 @@ body {
   width: 28px;
   height: 26px;
   position: absolute;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   font-weight: normal;
   color: var(--white-full);
@@ -1786,7 +1819,7 @@ body {
   width: 28px;
   height: 26px;
   position: absolute;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   font-weight: normal;
   color: var(--white-full);
@@ -1864,7 +1897,7 @@ body {
   height: 65%;
   position: absolute;
   bottom: 35%;
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: rgba(0, 0, 0, 0.95);
 }
 
 #players_left .player_section_bottom {
@@ -1937,7 +1970,7 @@ body {
 }
 
 #player_current_money_text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 18px;
   font-weight: normal;
   position: relative;
@@ -1958,7 +1991,7 @@ body {
 }
 
 #player_round_kills_text {
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   vertical-align: text-bottom;
   line-height: 26px;
   font-size: 20px;
@@ -2210,10 +2243,10 @@ body {
 #player_dead_deaths_d {
   width: 32px;
   height: 35px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   color: var(--white-half);
   position: absolute;
   top: -27px;
@@ -2224,7 +2257,7 @@ body {
 #player_dead_deaths_text {
   width: 32px;
   height: 35px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   line-height: 15px;
   font-size: 20px;
@@ -2237,8 +2270,9 @@ body {
 .player_spec {
   width: 300px;
   height: 80px;
-  position: fixed;
+  position: absolute;
   border-radius: 2px;
+  z-index: 10;
 }
 
 #players_left .player_spec {
@@ -2254,7 +2288,7 @@ body {
   height: 100%;
   position: relative;
   opacity: 0.1;
-  z-index: -1;
+  z-index: 1;
 }
 
 .player_stats_holder {
@@ -2348,12 +2382,12 @@ body {
   width: 32px;
   height: 30px;
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 42px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   color: var(--dev-purple);
 }
 
@@ -2363,7 +2397,7 @@ body {
   width: 32px;
   height: 30px;
   position: relative;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 30px;
@@ -2377,7 +2411,7 @@ body {
   height: 60px;
   position: relative;
   left: 5px;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 65px;
@@ -2409,9 +2443,9 @@ body {
 
 .bomb_active {
   background-image: url("/files/img/elements/icon_c4_T.gif");
-  max-height: 45px;
-  width: auto;
-  top: 8px;
+  max-height: 35px;
+  width: 40;
+  top: 5px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2421,7 +2455,7 @@ body {
   background-image: url("/files/img/elements/icon_bomb_explosion_T.png");
   max-height: 40px;
   width: auto;
-  top: 8px;
+  top: 4px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2431,7 +2465,7 @@ body {
   background-image: url("/files/img/elements/icon_defuse_CT.png");
   max-height: 40px;
   width: auto;
-  top: 8px;
+  top: 4px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

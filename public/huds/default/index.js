@@ -3,8 +3,8 @@ const COLOR_T = "rgba(242, 162, 37, 1.0)";
 const COLOR_NEW_CT = "rgba(56, 123, 238, 1.0)";
 const COLOR_NEW_T = "rgba(242, 162, 37, 1.0)";
 const COLOR_RED = "rgba(242, 34, 34, 1.0)";
-const COLOR_MAIN_PANEL = "rgba(0, 0, 0, 0.9)";
-const COLOR_SUB_PANEL = "rgba(0, 0, 0, 0.9)";
+const COLOR_MAIN_PANEL = "rgba(0, 0, 0, 0.95)";
+const COLOR_SUB_PANEL = "rgba(0, 0, 0, 0.95)";
 const COLOR_GRAY = "rgba(191, 191, 191, 1.0)";
 const COLOR_WHITE = "rgba(250, 250, 250, 1.0)";
 const COLOR_WHITE_HALF = "rgba(250, 250, 250, 0.5)";
@@ -216,6 +216,37 @@ function updateTopPanel() {
   //#endregion
 }
 
+let currentRound = 0; // Track rounds
+
+socket.on("roundEnd", (score) => {
+    currentRound++; // Increment round count
+    console.log(`Round Ended: ${currentRound}`); // Debugging
+
+    if (currentRound === 12) {
+        swapTeams();
+    }
+});
+
+function swapTeams() {
+    console.log("Swapping teams at halftime...");
+
+    // Swap team data
+    let temp = { ...teams.left }; // Deep copy
+    teams.left = teams.right;
+    teams.right = temp;
+
+    // Swap side properties correctly
+    teams.left.side = teams.left.side === "ct" ? "t" : "ct";
+    teams.right.side = teams.right.side === "ct" ? "t" : "ct";
+
+    // Force UI update
+    updateTopPanel();
+    updateTeamValues(teams.left, teams.right);
+
+    console.log("Teams swapped successfully.");
+}
+
+
 function updateLeague() {
   $("#radar_container #radar_main").text(_left_primary);
   $("#players_left #box_image").attr("src", _left_image);
@@ -345,10 +376,10 @@ function updateStateOver(phase, round, previously) {
     if (round.win_team == "CT") {
       if (teams.left.side == "ct") {
         // * CT alert on Left
-        showAlertSlide("#left_team", COLOR_NEW_CT, "WINS THE ROUND");
+        showAlertSlide("#left_team",teams.left.name + COLOR_NEW_CT, "WINS THE ROUND");
       } else {
         // * CT alert on Right
-        showAlertSlide("#right_team", COLOR_NEW_CT, "WINS THE ROUND");
+        showAlertSlide("#right_team",teams.right.name + COLOR_NEW_CT, "WINS THE ROUND");
       }
     } else if (round.win_team == "T") {
       if (teams.left.side == "t") {
@@ -518,7 +549,7 @@ function updateStateDefuse(phase, bomb, players) {
             }
           });
           // 13 characters for name
-          showAlertSlide(defusing_side, COLOR_NEW_CT,"Defusing" );
+          showAlertSlide(defusing_side, COLOR_NEW_CT, defuser.name + " is defusing");
         }
       }
     }
@@ -531,22 +562,27 @@ function updateStateLive(phase, bomb, players, previously) {
     forceRemoveAlerts();
     resetBomb();
     hidePlayerStats(phase, previously);
+
     if (checkPrev(previously, "freezetime")) {
       $("#players_left #box_monetary").slideUp(500);
       $("#players_right #box_monetary").slideUp(500);
       $("#Vetos").slideUp(500);
     }
+
     if (phase.phase_ends_in <= 109.9) {
       $("#players_left #box_utility").slideUp(500);
       $("#players_right #box_utility").slideUp(500);
     }
+
     if (phase.phase_ends_in <= 5) {
       $("#round_timer_text")
         .addClass("animated flash")
         .css("animation-duration", "2s")
         .css("animation-iteration-count", "infinite");
     }
+
     $("#round_timer_text").css("color", phase.phase_ends_in <= 10 ? COLOR_RED : COLOR_WHITE);
+
     if (phase.phase_ends_in) {
       var clock_time = Math.abs(Math.ceil(phase.phase_ends_in));
       var count_minute = Math.floor(clock_time / 60);
@@ -556,17 +592,37 @@ function updateStateLive(phase, bomb, players, previously) {
       }
       $("#round_timer_text").text(count_minute + ":" + count_seconds);
     }
+
     if (bomb != null) {
       if (bomb.state == "planting") {
         let side = teams.left.side == "t" ? "#left_team" : "#right_team";
-        player = bomb.player;
+        let planter = null;
+        
         players.forEach(function (_player) {
-          if (_player.steamid == player) {
+          if (_player.steamid == bomb.player) {
             planter = _player;
           }
         });
-        // 13 characters for name
-        showAlertSlide(side, COLOR_NEW_T," planting");
+
+        if (planter) {
+          showAlertSlide(side, COLOR_NEW_T, planter.name + " is planting");
+
+          // Create a bomb planting progress bar if it doesn’t exist
+          if ($("#plant_progress").length === 0) {
+            $("body").append(`
+              <div id="plant_progress_container">
+                <div id="plant_progress"></div>
+              </div>
+            `);
+          }
+
+          // Reset and start the animation (3.2 seconds plant time)
+          $("#plant_progress").css({ width: "0%" }).animate({ width: "100%" }, 3200, "linear", function () {
+            $("#plant_progress_container").fadeOut(500, function () {
+              $(this).remove(); // Remove after animation
+            });
+          });
+        }
       }
     }
   }
@@ -651,7 +707,7 @@ const truncatedAlias = obs.name.length > 14 ? obs.name.slice(0, 14) : obs.name;
 // Update alias text and color
 $("#obs_alias_text")
   .text(truncatedAlias)
-  .css("color", team_color);
+  //.css("color", team_color);
 
 // Update real name text, or clear it if not applicable
 $("#obs_realname_text").text(
@@ -709,14 +765,14 @@ $("#obs_realname_text").text(
   }
   
   let health = stats.health;
-  $("#obs_hpbar1").css("background-color", team_color);
-  $("#obs_hpbar2").css("background-color", team_color);
-  $("#obs_hpbar3").css("background-color", team_color);
+  //$("#obs_hpbar1").css("background-color", team_color);
+  //$("#obs_hpbar2").css("background-color", team_color);
+  //$("#obs_hpbar3").css("background-color", team_color);
   $("#obs_hpbar4").css("background-color", team_color);
-  $("#obs_hpbar1").css("width", (health > 0 && health < 25) ? health + "%": (health <= 0) ? "0%" : (health > 25) ? "100%" : "0%");
-  $("#obs_hpbar2").css("width", (health > 25 && health < 50) ? health + "%": (health <= 25) ? "0%" : (health > 50) ? "100%" : "0%");
-  $("#obs_hpbar3").css("width", (health > 50 && health < 75) ? health + "%": (health <= 50) ? "0%" : (health > 75) ? "100%" : "0%");
-  $("#obs_hpbar4").css("width", (health > 75 && health <= 100) ? health + "%": '0%');
+  //$("#obs_hpbar1").css("width", (health > 0 && health < 25) ? health + "%": (health <= 0) ? "0%" : (health > 25) ? "100%" : "0%");
+  //$("#obs_hpbar2").css("width", (health > 25 && health < 50) ? health + "%": (health <= 25) ? "0%" : (health > 50) ? "100%" : "0%");
+  //$("#obs_hpbar3").css("width", (health > 50 && health < 75) ? health + "%": (health <= 50) ? "0%" : (health > 75) ? "100%" : "0%");
+  $("#obs_hpbar4").css("width", (health > 0 && health <= 100) ? health + "%": '0%');
 
 
 
@@ -885,7 +941,10 @@ if (slot === 10) {
   $player.find(".player_slot_number").text(slot); // For other slots
 }
 // Style adjustments
-$player.find(".player_slot_number").css("background-color", dead ? COLOR_MAIN_PANEL : side_color);
+$player.find(".player_slot_number").css({
+  "background-color": dead ? COLOR_MAIN_PANEL : "black", 
+  "border": `0.5px solid ${side_color}` // Sets border color to side_color
+});
 $player.find(".player_slot_number").css("display", dead ? "none" : "block");
 
   //End Player Slot Section
@@ -1656,4 +1715,20 @@ function printPlayerData(players) {
     console.log(players_data);
     printed_player_data = true;
   }
+}
+
+// Store damage data per player
+let playerADR = {}; // { steamid: { totalDamage: 0, roundsPlayed: 0 } }
+
+// Function to update ADR display
+function updateADR() {
+    $(".player_adr_text").each(function () {
+        let steamid = $(this).attr("data-steamid");
+        if (playerADR[steamid]) {
+            let adr = (playerADR[steamid].totalDamage / playerADR[steamid].roundsPlayed).toFixed(1);
+            $(this).text(adr);
+        } else {
+            $(this).text("0.0");
+        }
+    });
 }
