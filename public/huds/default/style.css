@@ -322,7 +322,7 @@ body {
   line-height: 15px;
   font-size: 14px;
   font-weight: normal;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #alert {
@@ -330,7 +330,7 @@ body {
   position: relative;
   width: 200px;
   height: 30px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.95);
 }
 
 #left_team > #alert {
@@ -366,33 +366,18 @@ body {
 #left_team > #alert > #alert_text {
   left: 5px;
   top: 2.5px;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
 }
 
 #right_team > #alert > #alert_text {
   left: 5px;
   top: 2.5px;
+  display: flex;          /* Enables flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
 }
-
-#plant_progress_container {
-  position: fixed;
-  top: 85px;
-  left: 1135px;
-  transform: translateX(-50%);
-  width: 200px;
-  height: 30px;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 2px;
-  overflow: hidden;
-  z-index: -1;
-}
-
-#plant_progress {
-  width: 0%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.95); /* Change this color if needed */
-  transition: width linear;
-}
-
 
 #bomb_defuse {
   position: absolute;
@@ -460,7 +445,7 @@ body {
   transform: translateX(-50%);
   z-index: 1;
   border-radius: 2px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 #defuse_bar {

@@ -603,25 +603,8 @@ function updateStateLive(phase, bomb, players, previously) {
             planter = _player;
           }
         });
-
         if (planter) {
           showAlertSlide(side, COLOR_NEW_T, planter.name + " is planting");
-
-          // Create a bomb planting progress bar if it doesn’t exist
-          if ($("#plant_progress").length === 0) {
-            $("body").append(`
-              <div id="plant_progress_container">
-                <div id="plant_progress"></div>
-              </div>
-            `);
-          }
-
-          // Reset and start the animation (3.2 seconds plant time)
-          $("#plant_progress").css({ width: "0%" }).animate({ width: "100%" }, 3200, "linear", function () {
-            $("#plant_progress_container").fadeOut(500, function () {
-              $(this).remove(); // Remove after animation
-            });
-          });
         }
       }
     }
