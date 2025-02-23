@@ -376,10 +376,10 @@ function updateStateOver(phase, round, previously) {
     if (round.win_team == "CT") {
       if (teams.left.side == "ct") {
         // * CT alert on Left
-        showAlertSlide("#left_team",teams.left.name + COLOR_NEW_CT, "WINS THE ROUND");
+        showAlertSlide("#left_team", COLOR_NEW_CT, "WINS THE ROUND");
       } else {
         // * CT alert on Right
-        showAlertSlide("#right_team",teams.right.name + COLOR_NEW_CT, "WINS THE ROUND");
+        showAlertSlide("#right_team", COLOR_NEW_CT, "WINS THE ROUND");
       }
     } else if (round.win_team == "T") {
       if (teams.left.side == "t") {
