@@ -158,9 +158,7 @@ function updateVetos(vetos) {
     $("#map_3_winner img").attr("src", vetos.map3_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map3_WINNER.logo);
     $("#map_4_winner img").attr("src", vetos.map4_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map4_WINNER.logo);
     $("#map_5_winner img").attr("src", vetos.map5_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map5_WINNER.logo);
-
   }
-
 }
 
 function updateTopPanel() {
@@ -1034,7 +1032,7 @@ $player.find(".player_slot_number").css("display", dead ? "none" : "block");
     $player
       .find("#player_spec_bar")
       .css("background", gradient)
-      .css("opacity", 1);
+      .css("opacity", 0.7);
   } else {
     $player.find("#player_spec_bar").css("opacity", 0);
   }
@@ -1698,20 +1696,4 @@ function printPlayerData(players) {
     console.log(players_data);
     printed_player_data = true;
   }
-}
-
-// Store damage data per player
-let playerADR = {}; // { steamid: { totalDamage: 0, roundsPlayed: 0 } }
-
-// Function to update ADR display
-function updateADR() {
-    $(".player_adr_text").each(function () {
-        let steamid = $(this).attr("data-steamid");
-        if (playerADR[steamid]) {
-            let adr = (playerADR[steamid].totalDamage / playerADR[steamid].roundsPlayed).toFixed(1);
-            $(this).text(adr);
-        } else {
-            $(this).text("0.0");
-        }
-    });
 }

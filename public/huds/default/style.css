@@ -270,8 +270,8 @@ body {
 }
 
 #map_1_pick, #map_2_pick, #map_3_pick, #map_4_pick, #map_5_pick {
-  background: rgb(0,0,0,0.5);
-  background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.5) 90%, rgba(0,0,0,0) 90%);
+  background: rgb(0,0,0,0.8);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.9) 90%, rgba(0,0,0,0) 90%);
 }
 
 /* End Vetos Section */
@@ -706,7 +706,7 @@ body {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   width: 200px;
-  height: 180px;
+  height: 150px;
   position: relative;
   opacity: 0.3;
 }
@@ -721,7 +721,7 @@ body {
   left: 5px;
   line-height: 24px;
   font-size: 24px;
-  color: #1e1e1e;
+  color: black;
   bottom: -1px;
   z-index: 10;
 }
@@ -750,7 +750,7 @@ body {
 #obs_hpbarX{
   width: 100%;
   height: 100%;
-  background-color: #1e1e1e;
+  background-color: black;
 }
 #obs_hpblock4 {
   width: 225px;
@@ -818,7 +818,7 @@ body {
   align-items: center; /* Vertically center */
   font-size: 24px;
   bottom: 2px;
-  color: #1e1e1e;
+  color: black;
 }
 
 #obs_armor_section {
@@ -844,7 +844,7 @@ body {
   left: 35px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
-  color: #1e1e1e;
+  color: black;
 }
 
 #obs_middle_section {
@@ -890,7 +890,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 20px;
   font-weight: normal;
-  color: #1e1e1e; 
+  color: black; 
   opacity: 0.8;
   z-index: 10;
 }
@@ -1081,7 +1081,7 @@ body {
 }
 
 #obs_clip {
-  left: 45px;
+  left: 47px;
   width: 30px;
   height: 30px;
   position: absolute;
@@ -1642,7 +1642,7 @@ body {
   height: 35%;
   position: absolute;
   top: 65%;
-  background-color: #1e1e1e;
+  background-color: black;
   z-index: 10;
 }
 
@@ -1710,7 +1710,7 @@ body {
   font-weight: normal;
   text-align: center;
   position: relative;
-  color: #1e1e1e;
+  color: black;
   z-index: 10;
 }
 .player_alias {
