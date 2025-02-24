@@ -53,7 +53,7 @@
 .row
 	.col.s12
 		.col.s4
-			#Map1Card.card.small.blue-grey.darken-4
+			#Map1Card.card.medium.blue-grey.darken-4
 				.card-content
 					.card-title(style="text-align: center;") Map 1
 					.input-field
@@ -77,8 +77,10 @@
 						select#map_1_winner
 							option(value=NULL, selected) None
 						label Team that won
+					.input-field
+						input#map_1_score(min="0" placeholder="Enter Score")
 		.col.s4
-			#Map2Card.card.small.blue-grey.darken-4
+			#Map2Card.card.medium.blue-grey.darken-4
 				.card-content
 					.card-title(style="text-align: center;") Map 2
 					.input-field
@@ -102,8 +104,10 @@
 						select#map_2_winner
 							option(value=NULL, selected) None
 						label Team that won
+					.input-field
+						input#map_2_score(min="0" placeholder="Enter Score")
 		.col.s4
-			#Map3Card.card.small.blue-grey.darken-4
+			#Map3Card.card.medium.blue-grey.darken-4
 				.card-content
 					.card-title(style="text-align: center;") Map 3
 					.input-field
@@ -127,9 +131,11 @@
 						select#map_3_winner
 							option(value=NULL, selected) None
 						label Team that won
+					.input-field
+						input#map_3_score(min="0" placeholder="Enter Score")
 	.col.s12
 		.col.s4.offset-s2
-			#Map4Card.card.small.blue-grey.darken-4
+			#Map4Card.card.medium.blue-grey.darken-4
 				.card-content
 					.card-title(style="text-align: center;") Map 4
 					.input-field
@@ -153,8 +159,10 @@
 						select#map_4_winner
 							option(value=NULL, selected) None
 						label Team that won
+					.input-field
+						input#map_4_score(min="0" placeholder="Enter Score")
 		.col.s4
-			#Map5Card.card.small.blue-grey.darken-4
+			#Map5Card.card.medium.blue-grey.darken-4
 				.card-content
 					.card-title(style="text-align: center;") Map 5
 					.input-field
@@ -178,6 +186,8 @@
 						select#map_5_winner
 							option(value=NULL, selected) None
 						label Team that won
+					.input-field
+						input#map_5_score(min="0" placeholder="Enter Score")
 
 .row
 	.input-field.col.s12

@@ -211,7 +211,7 @@ body {
 /* Start Vetos Section */
 #vetos {
   width: 675px;
-  height: 100px;
+  height: 120px;
   position: absolute;
   display: flex;
   left: 50%;
@@ -282,7 +282,7 @@ body {
   bottom: 21px;
   justify-content: center;
 }
-#map_1_pick{
+#map_1_pick,#map_2_pick,#map_3_pick,#map_4_pick,#map_5_pick{
   position: relative;
   height: 20px;
   width: 125px;
@@ -290,7 +290,7 @@ body {
   display: flex;
   top: 0px;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.95);
 }
 #map_1_winner{
   position: relative;
@@ -319,16 +319,6 @@ body {
   bottom: 21px;
   justify-content: center;
 }
-#map_2_pick{
-  position: relative;
-  height: 20px;
-  width: 125px;
-  left: 0px;
-  display: flex;
-  top: 0px;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-}
 #map_2_winner{
   position: relative;
   height: 50px;
@@ -355,16 +345,6 @@ body {
   display: flex;
   bottom: 21px;
   justify-content: center;
-}
-#map_3_pick{
-  position: relative;
-  height: 20px;
-  width: 125px;
-  left: 0px;
-  display: flex;
-  top: 0px;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 #map_3_winner{
   position: relative;
@@ -393,16 +373,6 @@ body {
   bottom: 21px;
   justify-content: center;
 }
-#map_4_pick{
-  position: relative;
-  height: 20px;
-  width: 125px;
-  left: 0px;
-  display: flex;
-  top: 0px;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-}
 #map_4_winner{
   position: relative;
   height: 50px;
@@ -430,16 +400,6 @@ body {
   bottom: 21px;
   justify-content: center;
 }
-#map_5_pick{
-  position: relative;
-  height: 20px;
-  width: 125px;
-  left: 0px;
-  display: flex;
-  top: 0px;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-}
 #map_5_winner{
   position: relative;
   height: 50px;
@@ -447,6 +407,18 @@ body {
   display: flex;
   top: 0px;
   justify-content: center;
+  z-index: 99;
+}
+#map_1_score,#map_2_score,#map_3_score,#map_4_score,#map_5_score{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
 }
 /* End Vetos Section */

@@ -40,6 +40,9 @@ function loadMatch(data) {
       $("#map_1_winner")
         .val("0")
         .val(data.map_1.map_winner);
+      $("#map_1_score")
+        .val("0")
+        .val(data.map_1.map_score);
       $("#map_2_pick")
         .val("0")
         .val(data.map_2.map_pick);
@@ -49,6 +52,9 @@ function loadMatch(data) {
       $("#map_2_winner")
         .val("0")
         .val(data.map_2.map_winner);
+      $("#map_2_score")
+        .val("0")
+        .val(data.map_2.map_score);
       $("#map_3_pick")
         .val("0")
         .val(data.map_3.map_pick);
@@ -58,6 +64,9 @@ function loadMatch(data) {
       $("#map_3_winner")
         .val("0")
         .val(data.map_3.map_winner);
+      $("#map_3_score")
+        .val("0")
+        .val(data.map_3.map_score);
       $("#map_4_pick")
         .val("0")
         .val(data.map_4.map_pick);
@@ -67,6 +76,9 @@ function loadMatch(data) {
       $("#map_4_winner")
         .val("0")
         .val(data.map_4.map_winner);
+      $("#map_4_score")
+        .val("0")
+        .val(data.map_4.map_score);
       $("#map_5_pick")
         .val("0")
         .val(data.map_5.map_pick);
@@ -76,6 +88,9 @@ function loadMatch(data) {
       $("#map_5_winner")
         .val("0")
         .val(data.map_5.map_winner);
+      $("#map_5_score")
+        .val("0")
+        .val(data.map_5.map_score);
     }
     $("select").formSelect();
   });
@@ -127,26 +142,31 @@ $(document).ready(() => {
         map_pick: $("#map_1_pick").val(),
         map_team: $("#map_1_team").val(),
         map_winner: $("#map_1_winner").val(),
+        map_score: $("#map_1_score").val(),
       },
       map_2: {
         map_pick: $("#map_2_pick").val(),
         map_team: $("#map_2_team").val(),
         map_winner: $("#map_2_winner").val(),
+        map_score: $("#map_2_score").val(),
       },
       map_3: {
         map_pick: $("#map_3_pick").val(),
         map_team: $("#map_3_team").val(),
         map_winner: $("#map_3_winner").val(),
+        map_score: $("#map_3_score").val(),
       },
       map_4: {
           map_pick: $("#map_4_pick").val(),
           map_team: $("#map_4_team").val(),
           map_winner: $("#map_4_winner").val(),
+          map_score: $("#map_4_score").val(),
         },
       map_5: {
           map_pick: $("#map_5_pick").val(),
           map_team: $("#map_5_team").val(),
           map_winner: $("#map_5_winner").val(),
+          map_score: $("#map_5_score").val(),
         }
     };
     io.emit("update_match", match);

@@ -169,6 +169,10 @@ function updateVetos(vetos) {
 
       // Show or hide image shade based on winner selection
       $("#map_" + i + "_winner #image_shade").css("display", winnerLogo == null ? "none" : "block");
+
+      // Set the score
+      let score = vetos["map" + i + "_SCORE"] ?? "N/A"; // Use "N/A" if no score is available
+      $("#map_" + i + "_score").text(`${score}`);
     }
   }
 }

@@ -67,6 +67,11 @@ $(document).ready(function () {
         map3_WINNER: this.loadTeam(match.map_3.map_winner),
         map4_WINNER: this.loadTeam(match.map_4.map_winner),
         map5_WINNER: this.loadTeam(match.map_5.map_winner),
+        map1_SCORE: (match.map_1.map_score),
+        map2_SCORE: (match.map_2.map_score),
+        map3_SCORE: (match.map_3.map_score),
+        map4_SCORE: (match.map_4.map_score),
+        map5_SCORE: (match.map_5.map_score),
       };
       return vetos;
     },
