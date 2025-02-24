@@ -135,31 +135,44 @@ function setupBestOf(matchup, match) {
 function updateVetos(vetos) {
   if (!vetos) {
     $("#vetos_container").css("display", "none");
-  } 
-  else {
+  } else {
     $("#vetos_container").css("display", "flex");
-    $("#map_1").css("background-image", vetos.map1_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map1_PICK + (".png"));
-    $("#map_2").css("background-image", vetos.map2_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map2_PICK + (".png"));
-    $("#map_3").css("background-image", vetos.map3_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map3_PICK + (".png"));
-    $("#map_4").css("background-image", vetos.map4_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map4_PICK + (".png"));
-    $("#map_5").css("background-image", vetos.map5_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map5_PICK + (".png"));
-    $("#map_1_team img").attr("src", vetos.map1_TEAM.logo == null ? "/storage/logo_CT_default.png" : "/storage/" + vetos.map1_TEAM.logo);
-    $("#map_2_team img").attr("src", vetos.map2_TEAM.logo == null ? "/storage/logo_T_default.png" : "/storage/" + vetos.map2_TEAM.logo);
-    $("#map_3_team img").attr("src", vetos.map3_TEAM.logo == null ? "/storage/logo_CT_default.png" : "/storage/" + vetos.map3_TEAM.logo);
-    $("#map_4_team img").attr("src", vetos.map4_TEAM.logo == null ? "/storage/logo_T_default.png" : "/storage/" + vetos.map4_TEAM.logo);
-    $("#map_5_team img").attr("src", vetos.map5_TEAM.logo == null ? "/storage/logo_CT_default.png" : "/storage/" + vetos.map5_TEAM.logo);
-    $("#map_1_pick").text(vetos.map1_PICK);
-    $("#map_2_pick").text(vetos.map2_PICK);
-    $("#map_3_pick").text(vetos.map3_PICK);
-    $("#map_4_pick").text(vetos.map4_PICK);
-    $("#map_5_pick").text(vetos.map5_PICK);
-    $("#map_1_winner img").attr("src", vetos.map1_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map1_WINNER.logo);
-    $("#map_2_winner img").attr("src", vetos.map2_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map2_WINNER.logo);
-    $("#map_3_winner img").attr("src", vetos.map3_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map3_WINNER.logo);
-    $("#map_4_winner img").attr("src", vetos.map4_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map4_WINNER.logo);
-    $("#map_5_winner img").attr("src", vetos.map5_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map5_WINNER.logo);
+
+    for (let i = 1; i <= 5; i++) {
+      // Set background images for maps
+      $("#map_" + i).css(
+        "background-image",
+        vetos["map" + i + "_PICK"] === "none"
+          ? "none"
+          : `url('/files/img/maps/${vetos["map" + i + "_PICK"]}.png')`
+      );
+
+      // Set team logos
+      $("#map_" + i + "_team img").attr(
+        "src",
+        vetos["map" + i + "_TEAM"].logo == null
+          ? (i % 2 === 0 ? "/storage/logo_T_default.png" : "/storage/logo_CT_default.png")
+          : "/storage/" + vetos["map" + i + "_TEAM"].logo
+      );
+
+      // Set text for picked maps
+      $("#map_" + i + "_pick").text(vetos["map" + i + "_PICK"]);
+
+      // Set winner logos
+      let winnerLogo = vetos["map" + i + "_WINNER"].logo;
+      $("#map_" + i + "_winner img").attr(
+        "src",
+        winnerLogo == null
+          ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E"
+          : "/storage/" + winnerLogo
+      );
+
+      // Show or hide image shade based on winner selection
+      $("#map_" + i + "_winner #image_shade").css("display", winnerLogo == null ? "none" : "block");
+    }
   }
 }
+
 
 function updateTopPanel() {
   //#region Team Name
