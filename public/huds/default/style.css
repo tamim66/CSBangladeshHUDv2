@@ -2634,7 +2634,7 @@ body {
 
 .players_eliminated_T {
   background-image: url("/files/img/elements/icon_skull_T.png");
-  max-height: 40px;
+  max-height: 30px;
   width: auto;
   top: 6px;
   background-repeat: no-repeat;
@@ -2644,7 +2644,7 @@ body {
 
 .players_eliminated_CT {
   background-image: url("/files/img/elements/icon_skull_CT.png");
-  max-height: 40px;
+  max-height: 30px;
   width: auto;
   top: 6px;
   background-repeat: no-repeat;
@@ -2654,9 +2654,9 @@ body {
 
 .round_time_reached {
   background-image: url("/files/img/elements/icon_timer_CT.png");
-  max-height: 40px;
+  max-height: 30px;
   width: auto;
-  top: 8px;
+  top: 6px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
