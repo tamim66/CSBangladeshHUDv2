@@ -830,11 +830,9 @@ body {
   border-bottom-left-radius: 2px;
   position: relative;
   left: 0%;
-  width: 150px;
-  height: 150px;
-  display: flex;          /* Enables flexbox */
-  justify-content: center; /* Centers horizontally */
-  align-items: center; 
+  width: 175px;
+  height: 175px;
+  bottom: 13px;
   z-index: 1;
 }
 
@@ -851,8 +849,8 @@ body {
 #obs_team_img{
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  width: 200px;
-  height: 150px;
+  width: 260px;
+  height: 200px;
   position: relative;
   opacity: 0.3;
 }
@@ -883,7 +881,7 @@ body {
 
 #obs_hp_section {
   border-bottom-right-radius: 2px;
-  width: 225px;
+  width: 260px;
   height: 25px;
   bottom: 0px;
   position: absolute;
@@ -1123,24 +1121,13 @@ body {
   height: 25px;
   z-index: 1;
 }
-
-#obs_nades_h {
-  width: 110px;
-  height: 25px;
-  position: absolute;
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 #obs_nade1_h,#obs_nade2_h,#obs_nade3_h,#obs_nade4_h {
-  flex: 1;
-  display: flex;
   justify-content: center;
   align-items: center; 
-  width: 25px;
-  height: 25px;
+  width: 5px;
+  height: 5px;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 50%;
   z-index: 1;
 }
 
