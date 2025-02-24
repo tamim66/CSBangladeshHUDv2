@@ -312,9 +312,9 @@ body {
   position: absolute;
   top: 45px;
   height: 100%;
-  width: 70px;
+  width: 60px;
+  height: 14px;
   font-family: "Bebas Neue", sans-serif;
-  display: flex;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 14px;
