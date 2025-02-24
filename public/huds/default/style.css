@@ -310,16 +310,14 @@ body {
 
 #round_number {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 2px;
-  float: left;
+  top: 45px;
+  height: 100%;
   width: 70px;
-  height: 16px;
   font-family: "Bebas Neue", sans-serif;
+  display: flex;
   text-align: center;
   vertical-align: text-bottom;
-  line-height: 15px;
+  line-height: 14px;
   font-size: 14px;
   font-weight: normal;
   opacity: 0.7;
