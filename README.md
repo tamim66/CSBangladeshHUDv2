@@ -1,4 +1,4 @@
-![](https://github.com/tamim66/CSBangladeshHUDv2/blob/main/Screenshot-2024-11-22-13-27-35.png?raw=true)
+![](https://github.com/tamim66/CSBangladeshHUDv2/blob/main/Screenshot%202025-02-23%2019-58-35.png?raw=true)
 
 # CSBangladeshHud-v2
 > Thanks to [dionpirotta](https://github.com/dionpirotta/Custom-CSGO-HUD#examples) for Hud & [boltgolt](https://github.com/boltgolt/boltobserv?tab=readme-ov-file) for radar.
