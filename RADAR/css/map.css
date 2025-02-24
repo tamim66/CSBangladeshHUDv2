@@ -108,11 +108,11 @@ div.dot::after {
 }
 
 div.dot.CT {
-  background: #5ab8f4;
+  background: rgba(56, 123, 238, 1.0);
 }
 
 div.dot.T {
-  background: #f0c941;
+  background: rgba(242, 162, 37, 1.0);
 }
 
 div.dot.bomb {

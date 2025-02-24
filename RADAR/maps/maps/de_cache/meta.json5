@@ -7,12 +7,12 @@
 	},
 
 	// The amount of in-game units per pixel of the 1024px radar image
-	"resolution": 4.74,
+	"resolution": 5.54,
 
 	// How many in-game units is the origin (0,0) of the map from the bottom left point of the radar
 	"offset": {
-		"x": 2510,
-		"y": 2440
+		"x": 2020,
+		"y": 2390
 	},
 
 	// Contains any special map splits
@@ -20,13 +20,7 @@
 
 	// Position in which advisories should be placed, in percentages from the bottom left
 	"advisoryPosition": {
-		"x": 10,
-		"y": 56
-	},
-
-	// The minimum and maximum height a player can be on the map
-	"zRange": {
-		"min": -320,
-		"max": 15
+		"x": 72,
+		"y": 69
 	}
 }
