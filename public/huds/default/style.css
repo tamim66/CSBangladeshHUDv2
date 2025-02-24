@@ -805,8 +805,8 @@ body {
 }
 #observed {
   border-radius: 2px;
-  width: 225px;
-  height: 175px;
+  width: 260px;
+  height: 200px;
   position: absolute;
   left: 960px;
   bottom: 105px;
@@ -816,8 +816,8 @@ body {
 #obs_avatar {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  width: 225px;
-  height: 150px;
+  width: 260px;
+  height: 200px;
   position: absolute;
   display: flex;          /* Enables flexbox */
   justify-content: center; /* Centers horizontally */
@@ -841,8 +841,8 @@ body {
 #obs_team { 
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-  width: 225px;
-  height: 150px;
+  width: 260px;
+  height: 200px;
   position: absolute;
   display: flex;          /* Enables flexbox */
   justify-content: center; /* Centers horizontally */
@@ -875,8 +875,8 @@ body {
 #obs_lane3 {
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
-  height: 150px;
-  width: 225px;
+  height: 200px;
+  width: 260px;
   float: right;
   background: rgb(0, 0, 0, 0.95);
 }
@@ -899,7 +899,7 @@ body {
   background-color: black;
 }
 #obs_hpblock4 {
-  width: 225px;
+  width: 260px;
   height: 25px;
   position: absolute;
   left: 0px;
@@ -918,7 +918,7 @@ body {
 
 #obs_lane3_left_pole {
   border-bottom-right-radius: 2px;
-  width: 225px;
+  width: 260px;
   height: 25px;
   bottom: 0px;
   position: absolute; 
@@ -929,7 +929,7 @@ body {
 }
 
 #obs_left_section { 
-  width: 225px;
+  width: 260px;
   height: 25px;
   bottom: 0px;
   position: absolute;
@@ -1106,107 +1106,53 @@ body {
 }
 
 #obs_nades {
-  width: 112.5px;
-  height: 30px;
+  width: 110px;
+  height: 25px;
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-#obs_nade1 {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 5px;
-  bottom: 5px;
-  z-index: 1;
-}
-
-#obs_nade2 {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 25px;
-  bottom: 5px;
-  z-index: 1;
-}
-
-#obs_nade3 {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 45px;
-  bottom: 5px;
-  z-index: 1;
-}
-
-#obs_nade4 {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 65px;
-  bottom: 5px;
+#obs_nade1,#obs_nade2,#obs_nade3,#obs_nade4 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 25px;
+  height: 25px;
   z-index: 1;
 }
 
 #obs_nades_h {
-  width: 112.5px;
-  height: 30px;
+  width: 110px;
+  height: 25px;
   position: absolute;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-#obs_nade1_h {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #fafafa;
-  bottom: 10px;
-  opacity: 0.3;
+#obs_nade1_h,#obs_nade2_h,#obs_nade3_h,#obs_nade4_h {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 25px;
+  height: 25px;
   z-index: 1;
-  left: 10px;
-}
-
-#obs_nade2_h {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #fafafa;
-  bottom: 10px;
-  opacity: 0.3;
-  z-index: 1;
-  left: 30px;
-}
-
-#obs_nade3_h {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #fafafa;
-  bottom: 10px;
-  opacity: 0.3;
-  z-index: 1;
-  left: 50px;
-}
-
-#obs_nade4_h {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  position: absolute;
-  background-color: #fafafa;
-  bottom: 10px;
-  opacity: 0.3;
-  z-index: 1;
-  left: 70px;
 }
 
 #obs_right_section {
-  width: 112.5px;
-  height: 30px;
+  width: 110px;
+  height: 35px;
   bottom: 25px;
   left: 0px;
   position: absolute;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
 }
 
 #obs_bullets_section {
