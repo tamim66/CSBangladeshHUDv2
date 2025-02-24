@@ -210,70 +210,234 @@ body {
 
 /* Start Vetos Section */
 #vetos {
-  width: 300px;
-  height: 270px;
+  width: 675px;
+  height: 100px;
   position: absolute;
-  display: none;
-  right: 15px;
-  top: 10px;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100px;
   border-radius: 2px;
+  justify-content: space-evenly;
 }
 
-#vetos img:not([src]){ display:none; } /* Removes the borders for images that are not loaded*/
+#vetos img:not([src]){ display:none; } 
 
 #Vetos_Container {
-  width: 300px;
+  width: 675px;
   position: absolute;
   z-index: 1;
-  display: flex;
   flex-direction: column;
   border-radius: 2px;
 }
 #Vetos_Title {
-  flex: .5;
-  display: flex;
+  height: 30px;
+  width: 125px;
+  top: 0px;
   justify-content: center;
   align-items: center;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(0, 0, 0, 0.85);
 }
-#map_picked, #picked_by, #won_by {
+#picked_by{
+  position: relative;
+  top: 5px;
+  height: 21px;
+  width: 50px;
+  left: 10px;
+}
+#map_picked{
   flex: 1;
   display: flex;
   justify-content: space-evenly;
 }
 #Vetos_Maps {
-  flex: 4;
-  background: rgba(0, 0, 0, 0.95);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-radius: 2px;
   display: flex;
-  flex-direction: column;
+  flex-direction: rows;
+  justify-content: space-evenly
 }
-#map_1, #map_2, #map_3, #map_4, #map_5 {
-  flex: 1;
-  display: flex;
+#map_1{
+  height: 100px;
+  width: 125px;
   align-items: center;
   justify-content: space-evenly;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
-#map_1_pick, #map_1_team, #map_1_winner, #map_2_pick, #map_2_team, #map_2_winner, #map_3_pick, #map_3_team, #map_3_winner, #map_4_pick, #map_4_team, #map_4_winner, #map_5_pick, #map_5_team, #map_5_winner {
-  flex: 1;
+#map_1_team{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 90px;
   display: flex;
+  bottom: 21px;
   justify-content: center;
-  font-size: 15px;
-  text-transform: uppercase;
+}
+#map_1_pick{
+  position: relative;
+  height: 20px;
+  width: 125px;
+  left: 0px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#map_1_winner{
+  position: relative;
+  height: 50px;
+  width: 125px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-#map_1_pick, #map_2_pick, #map_3_pick, #map_4_pick, #map_5_pick {
-  background: rgb(0,0,0,0.8);
-  background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.8) 10%, rgba(0,0,0,0.9) 90%, rgba(0,0,0,0) 90%);
+#map_2{
+  height: 100px;
+  width: 125px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#map_2_team{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 90px;
+  display: flex;
+  bottom: 21px;
+  justify-content: center;
+}
+#map_2_pick{
+  position: relative;
+  height: 20px;
+  width: 125px;
+  left: 0px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#map_2_winner{
+  position: relative;
+  height: 50px;
+  width: 125px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
 }
 
+#map_3{
+  height: 100px;
+  width: 125px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#map_3_team{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 90px;
+  display: flex;
+  bottom: 21px;
+  justify-content: center;
+}
+#map_3_pick{
+  position: relative;
+  height: 20px;
+  width: 125px;
+  left: 0px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#map_3_winner{
+  position: relative;
+  height: 50px;
+  width: 125px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+}
+
+#map_4{
+  height: 100px;
+  width: 125px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#map_4_team{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 90px;
+  display: flex;
+  bottom: 21px;
+  justify-content: center;
+}
+#map_4_pick{
+  position: relative;
+  height: 20px;
+  width: 125px;
+  left: 0px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#map_4_winner{
+  position: relative;
+  height: 50px;
+  width: 125px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+}
+
+#map_5{
+  height: 100px;
+  width: 125px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#map_5_team{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  left: 90px;
+  display: flex;
+  bottom: 21px;
+  justify-content: center;
+}
+#map_5_pick{
+  position: relative;
+  height: 20px;
+  width: 125px;
+  left: 0px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#map_5_winner{
+  position: relative;
+  height: 50px;
+  width: 125px;
+  display: flex;
+  top: 0px;
+  justify-content: center;
+}
 /* End Vetos Section */
 
 #center_section {
@@ -300,10 +464,10 @@ body {
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
-  line-height: 60px;
+  line-height: 60px; 
   font-size: 30px;
-  font-weight: normal;
-  color: var(--dev-purple);
+  font-weight: normal; 
+  color: var(--dev-purple); 
   animation-duration: 0.25s;
   animation-iteration-count: 1;
 }
@@ -2489,7 +2653,7 @@ body {
   background-image: url("/files/img/elements/icon_skull_T.png");
   max-height: 40px;
   width: auto;
-  top: 8px;
+  top: 6px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2499,7 +2663,7 @@ body {
   background-image: url("/files/img/elements/icon_skull_CT.png");
   max-height: 40px;
   width: auto;
-  top: 8px;
+  top: 6px;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
