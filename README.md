@@ -1,4 +1,3 @@
-![](https://github.com/tamim66/CSBangladeshHUDv2/blob/main/Screenshot%202025-02-23%2019-58-35.png?raw=true)
 ![](https://github.com/tamim66/CSBangladeshHUDv2/blob/main/Screenshot%202025-02-25%2000-04-20.png?raw=true)
 
 # CSBangladeshHud-v2
