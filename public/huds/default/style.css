@@ -900,7 +900,7 @@ body {
   width: 260px;
   height: 25px;
   position: absolute;
-  left: 0px;
+  left:0px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px; 
 }

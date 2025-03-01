@@ -416,7 +416,7 @@ function updateStateOver(phase, round, previously) {
         }
       }
     }
-    //#endregion
+    //#endregio
     resetBomb();
     if (round.bomb == null) {
       if (round.win_team == "T") {
