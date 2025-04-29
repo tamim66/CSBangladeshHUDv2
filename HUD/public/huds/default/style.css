@@ -216,7 +216,7 @@ body {
   display: flex;
   left: 50%;
   transform: translateX(-50%);
-  top: 100px;
+  top: 150px;
   border-radius: 2px;
   justify-content: space-evenly;
 }
@@ -604,7 +604,7 @@ body {
   position: fixed;
   width: 150px;
   height: 30px;
-  top: 98px;
+  top: 88px;
   left: 50%;
   transform: translateX(-50%);
 }
