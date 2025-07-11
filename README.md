@@ -4,7 +4,7 @@
 > Thanks to [dionpirotta](https://github.com/dionpirotta/Custom-CSGO-HUD#examples) [JohnTimmermann](https://github.com/JohnTimmermann/Custom-CS2-HUD) for Hud & [boltgolt](https://github.com/boltgolt/boltobserv?tab=readme-ov-file) [fyflo](https://github.com/fyflo/CS-CS2-CSGO-HUDS-Observer-fyflo) for radar.
 
 ### Hud installation
-- Download and install node.js.
+- - Download and install node.js v22.1.0.
 - Download this repo somewhere.
 - /cfg/gamestate_integration_observerspectator.cfg needs to be placed in cfg folder in CS2 location.
 
